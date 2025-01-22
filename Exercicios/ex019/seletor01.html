@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline-block;
+            font: normal 17pt arial;
+            border: 3px groove black;
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            border-radius: 100px;
+
+        }
+        #bloco2:hover{
+            background: blue;
+            line-height: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="bloco1" class="bloco">Passe o mause!</div>
+    <div id="bloco2" class="bloco">Passe o mause!</div>
+<script>
+    var b = document.querySelector('div.bloco')
+    b.addEventListener('click', clicar)
+    b.addEventListener('mouseenter', entrar)
+    b.addEventListener('mouseout', sair)
+    var contador = 0
+    function clicar() {
+        contador ++
+        b.innerHTML = `CLICK! ${contador}X`
+        b.style.background = 'red'
+    }
+
+    function entrar (){
+        b.innerHTML = 'ENTROU!'
+    }
+
+    function sair() {
+        b.innerHTML = 'SAIU!'
+        contador = 0
+        b.style.background = 'green'
+    }
+</script>
+</body>
+</html>
