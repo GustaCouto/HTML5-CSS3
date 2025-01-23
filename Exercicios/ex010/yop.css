@@ -1,15 +1,13 @@
 @charset "UTF-8";
 body {
-    height: 100vh;
-    justify-content: center;
+    height: 98vh;
     background-image: linear-gradient(to top, #6CE084, #7EE06C, #6DE1AD);  
 }
 
-div{
-   
+main {
     background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.486);
     margin: auto;
-    background-repeat: no-repeat;
     width: 600px;
     padding: 10px;
     border-radius: 10px;
